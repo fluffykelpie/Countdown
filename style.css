@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Baloo da 2", cursive;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(rgba(219, 180, 103, 0.801) 20%,rgba(245, 224, 182, 0.397));
+    position: relative;
+}
+
+.countdown-wrapper {
+    width: 100%;
+    position: absolute;
+    top: 15%;
+    text-align: center;
+    color:rgba(255, 255, 255, 0.966);
+}
+
+.countdown-wrapper h1 {
+    font-size: 8rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 8rem;
+    text-shadow: 0.5rem 0.8rem rgba(246, 221, 170, 0.157);
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+}
+
+.countdown div {
+    width: 13rem;
+    height: 13rem;
+    background: linear-gradient(to bottom,
+    rgba(219, 180, 103, 0.604) 50%, 
+    rgba(245, 224, 182, 0.604) 0);
+    margin: 0 4rem 12rem 4rem;
+    font-size: 7rem;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 .8rem 2.5rem rgba(145,127,90, 0.5);
+    position: relative;
+}
+
+.countdown div::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: .24rem;
+    background-color: #917F5A;
+}
+
+.countdown div::after {
+    content: attr(data-content);
+    font-size: 2.2rem;
+    font-weight: 400;
+    position: absolute;
+    bottom: -6rem;
+}
+
+.reset {
+    width: 22rem;
+    height: 6rem;
+    border: 0;
+    background: linear-gradient(to bottom left, #a52a2a, rgb(255, 28, 28, 0.9));
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+    color: #eee;
+    text-shadow: 0 .3rem .5rem rgba(0,0,0 0.5);
+    box-shadow: 0 .3rem .5rem rgba(0,0,0 0.6);
+    outline: none;
+    cursor: pointer;
+}
+
+.reset:hover {
+    background: linear-gradient(to top right, #a52a2a, #d20404cc);
+}
